@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use Database\Factories\PurchaseHistoryFactory;
+use App\Models\PurchaseHistory;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -23,7 +24,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'davidsmith@gmail.com',
             'password' => bcrypt('davidsmithpassword')
         ]);
-        PurchaseHistoryFactory::factory(15)->create(['user_id' => $user1['id']]);
+        PurchaseHistory::factory(15)->create(['user_id' => $user1['id']]);
 
         $user2 = \App\Models\User::factory()->create([
             'first_name' => 'Random',
@@ -32,7 +33,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'randomperson@gmail.com',
             'password' => bcrypt('randompersonpassword')
         ]);
-        PurchaseHistoryFactory::factory(15)->create(['user_id' => $user2['id']]);
+        PurchaseHistory::factory(15)->create(['user_id' => $user2['id']]);
 
         $user3 = \App\Models\User::factory()->create([
             'first_name' => 'John',
@@ -41,6 +42,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'johndoe@gmail.com',
             'password' => bcrypt('johndoepassword')
         ]);
-        PurchaseHistoryFactory::factory(15)->create(['user_id' => $user3['id']]);
+        PurchaseHistory::factory(15)->create(['user_id' => $user3['id']]);
     }
 }

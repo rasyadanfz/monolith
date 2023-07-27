@@ -4,14 +4,13 @@ namespace Database\Factories;
 
 use App\Models\PurchaseHistory;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\PurchaseHistory>
  */
 class PurchaseHistoryFactory extends Factory
 {
-    protected $model = PurchaseHistory::class;
-
     /**
      * Define the model's default state.
      *
