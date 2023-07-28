@@ -9,11 +9,20 @@ use Illuminate\Support\Facades\Http;
 class ItemsController extends Controller
 {
     // Fetch all items from API
-    public function index(){
+    public function index(Request $request){
         try {
             $response = app('retryHttpClient')->request('GET', '/barang');
             $data = json_decode($response->getBody(), true);
             $items = collect($data['data']);
+            if ($request->has('search')){
+                $searchValue = $request->input('search');
+                $items = $items->filter(function ($items) use ($searchValue) {
+                    return stripos($items['nama'], $searchValue) !== false;
+                });
+            }
+
+            $sortBy = $request->input('sort_by', 'nama');
+            $items = $items->sortBy($sortBy);
 
             // Pagination
             $page = request()->input('page', 1);
@@ -28,7 +37,7 @@ class ItemsController extends Controller
                 ['path' => request()->url(), 'query' => request()->query()]
             );
 
-            return view('catalogs.index', compact('paginatedItems'));
+            return view('catalogs.index', compact('paginatedItems', 'sortBy'));
         } catch (\Exception $e){
             dd($e);
         }

@@ -30,7 +30,7 @@ Route::get('/purchase/{id}', [PurchaseController::class, 'show'])->name('purchas
 
 Route::post('/purchase', [PurchaseController::class, 'handlePurchase'])->middleware('auth');
 
-Route::get('/history/{user_id}', [PurchaseHistoryController::class, 'show'])->name('purchaseHistory')->middleware('auth');
+Route::get('/history', [PurchaseHistoryController::class, 'show'])->name('purchaseHistory')->middleware('auth');
 
 // Register & Login
 

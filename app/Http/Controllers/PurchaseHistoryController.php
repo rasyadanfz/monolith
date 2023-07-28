@@ -8,7 +8,8 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 class PurchaseHistoryController extends Controller
 {
-    public function show($id){
+    public function show(){
+        $id = auth()->user()->id;
         $purchaseHistory = PurchaseHistory::where('user_id', $id);
         $histories = $purchaseHistory->get();
 
