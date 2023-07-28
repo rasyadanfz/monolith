@@ -19,8 +19,6 @@ COPY . /var/www
 # Install Composer (dependency manager for PHP)
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Install Laravel dependencies using Composer
-RUN composer install
 
 # Expose port 9000 (the default PHP-FPM port)
 EXPOSE 9000
