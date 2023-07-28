@@ -11,15 +11,15 @@ class ItemsController extends Controller
     // Fetch all items from API
     public function index(Request $request){
         try {
-            $response = app('retryHttpClient')->request('GET', '/barang');
-            $data = json_decode($response->getBody(), true);
-            $items = collect($data['data']);
             if ($request->has('search')){
                 $searchValue = $request->input('search');
-                $items = $items->filter(function ($items) use ($searchValue) {
-                    return stripos($items['nama'], $searchValue) !== false;
-                });
+                $response = app('retryHttpClient')->request('GET', '/barang', ['query' => ['q' => $searchValue]]);
             }
+            else {
+                $response = app('retryHttpClient')->request('GET', '/barang');
+            }
+            $data = json_decode($response->getBody(), true);
+            $items = collect($data['data']);
 
             $sortBy = $request->input('sort_by', 'nama');
             $items = $items->sortBy($sortBy);

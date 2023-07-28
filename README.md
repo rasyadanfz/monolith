@@ -32,6 +32,8 @@ Jika tidak dapat menjalankan makefile, command tersebut dapat diganti dengan
 docker network create app_network
 docker compose build --no-cache
 docker compose up -d
+docker exec -it --user=root monolith-monolith_app-1 chmod -R 777 /var/www/storage
+docker exec monolith-monolith_app-1 bash -c "composer install"
 docker exec monolith-monolith_app-1 bash -c "php artisan migrate:fresh --seed"
 ```
 
@@ -80,8 +82,37 @@ Berikut adalah endpoint yang dibuat
 
 ## Bonus
 
--   Responsive Layout
--   Fitur Tambahan
-    -   Fungsionalitas search pada katalog barang
-    -   Fungsionalitas sort berdasarkan nama, stok, atau harga pada katalog barang
--   Lighthouse
+### Responsive Layout
+
+Berikut adalah cuplikan tampilan responsive pada web
+
+-   Mobile <br>
+    ![Mobile](./additional/Responsive%20Mobile.png)
+-   Dropdown Navbar Mobile
+    ![Navbar](./additional/Responsive%20Dropdown%20Mobile.png)
+-   Desktop
+    ![Desktop](./additional/Responsive%20Desktop.png)
+
+### Fitur Tambahan
+
+-   Fungsionalitas search pada katalog barang
+    ![Search](./additional/search.png)
+-   Fungsionalitas sort berdasarkan nama, stok, atau harga pada katalog barang
+    ![Sort](./additional/Sort%20Harga.png)
+
+### Lighthouse
+
+-   **Homepage**
+    ![Homepage](./additional/Lighthouse%20Homepage.png)
+-   **Register**
+    ![Register](./additional/Lighthouse%20Register.png)
+-   **Login**
+    ![Login](./additional/Lighthouse%20Login.png)
+-   **Katalog Barang**
+    ![katalog](./additional/Lighthouse%20Catalogs.png)
+-   **Detail Barang**
+    ![Detail](./additional/Lighthouse%20Detail%20Barang.png)
+-   **Beli Barang**
+    ![Beli](./additional/Lighthouse%20Beli%20Barang.png)
+-   **Riwayat Pembelian**
+    ![Riwayat](./additional/Lighthouse%20history.png)
