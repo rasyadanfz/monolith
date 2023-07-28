@@ -6,9 +6,9 @@ services:
             dockerfile: Dockerfile
         image: monolith_app
         ports:
-            - "8045:9000" # Map your local port 8000 to the PHP-FPM container port 9000
+            - "8045:9000"
         volumes:
-            - .:/var/www # Mount the current directory to the container's working directory
+            - .:/var/www
         depends_on:
             - db
         networks:
@@ -28,7 +28,7 @@ services:
     nginx:
         image: nginx:latest
         ports:
-            - "8000:80" # Map port 8000 on your host to port 80 on the Nginx container
+            - "8000:80"
         volumes:
             - ./nginx.conf:/etc/nginx/conf.d/default.conf
         depends_on:
