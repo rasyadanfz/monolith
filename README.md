@@ -41,9 +41,9 @@ Jika terdapat error ketika menjalankan command pertama, ignore saja error terseb
 
 ## Design Pattern
 
-1. **C**
+1. **Factory**
 
-    a
+    Design pattern Factory digunakan untuk membuat data dalam proses seeding. Data user dan data riwayat pembelian diciptakan menggunakan factory masing-masing yang memiliki implementasi masing-masing dan merupakan turunan dari sebuah abstract class Factory.
 
 2. **Singleton**
 
@@ -51,7 +51,7 @@ Jika terdapat error ketika menjalankan command pertama, ignore saja error terseb
 
 3. **Decorator**
 
-    a
+    Design pattern Decorator digunakan untuk menambah fungsionalitas retry pada Http Client sehingga Client dapat mencoba beberapa kali jika gagal dalam mengakses database. Hal ini bertujuan untuk meningkatkan reliabilitas aplikasi seandainya terjadi error dalam pengaksesan database.
 
 ## Tech Stack
 
@@ -84,3 +84,4 @@ Berikut adalah endpoint yang dibuat
 -   Fitur Tambahan
     -   Fungsionalitas search pada katalog barang
     -   Fungsionalitas sort berdasarkan nama, stok, atau harga pada katalog barang
+-   Lighthouse

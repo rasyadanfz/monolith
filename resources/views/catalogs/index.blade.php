@@ -4,7 +4,7 @@
         <div>
             <form action="" class="flex border border-black justify-between p-1 px-3 mb-3 gap-x-3">
                 <input type="search" name="search" id="search" placeholder="Cari nama barang" class="grow">
-                <button>
+                <button aria-label="search">
                     <i class="bi bi-search"></i>
                 </button>
             </form>
