@@ -21,7 +21,7 @@ up :
 	docker compose up -d
 
 setup:
-	docker exec -it --user=root container-name chmod -R 777 /var/www/storage
+	docker exec -it --user=root monolith-monolith_app-1 chmod -R 777 /var/www/storage
 	docker exec monolith-monolith_app-1 bash -c "composer install"
 
 seed:
