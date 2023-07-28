@@ -86,33 +86,54 @@ Berikut adalah endpoint yang dibuat
 
 Berikut adalah cuplikan tampilan responsive pada web
 
--   Mobile <br>
-    ![Mobile](./additional/Responsive%20Mobile.png)
+-   Mobile
+
+![Mobile](./additional/Responsive%20Mobile.png)
+
 -   Dropdown Navbar Mobile
-    ![Navbar](./additional/Responsive%20Dropdown%20Mobile.png)
+
+![Navbar](./additional/Responsive%20Dropdown%20Mobile.png)
+
 -   Desktop
-    ![Desktop](./additional/Responsive%20Desktop.png)
+
+![Desktop](./additional/Responsive%20Desktop.png)
 
 ### Fitur Tambahan
 
 -   Fungsionalitas search pada katalog barang
+
     ![Search](./additional/search.png)
+
 -   Fungsionalitas sort berdasarkan nama, stok, atau harga pada katalog barang
+
     ![Sort](./additional/Sort%20Harga.png)
 
 ### Lighthouse
 
 -   **Homepage**
+
     ![Homepage](./additional/Lighthouse%20Homepage.png)
+
 -   **Register**
+
     ![Register](./additional/Lighthouse%20Register.png)
+
 -   **Login**
+
     ![Login](./additional/Lighthouse%20Login.png)
+
 -   **Katalog Barang**
+
     ![katalog](./additional/Lighthouse%20Catalogs.png)
+
 -   **Detail Barang**
+
     ![Detail](./additional/Lighthouse%20Detail%20Barang.png)
+
 -   **Beli Barang**
+
     ![Beli](./additional/Lighthouse%20Beli%20Barang.png)
+
 -   **Riwayat Pembelian**
+
     ![Riwayat](./additional/Lighthouse%20history.png)
