@@ -1,7 +1,7 @@
 <x-layout>
     <div class="ms-2">
         @auth
-            <h1 class="font-bold text-[20px] md:text-[24px] lg:text-[28px]">Welcome, {{ auth()->user()->first_name . auth()->user()->last_name}}</h1>
+            <h1 class="font-bold text-[20px] md:text-[24px] lg:text-[28px]">Welcome, {{ auth()->user()->first_name . " " . auth()->user()->last_name}}</h1>
         @else
             <h1 class="font-bold text-[20px] md:text-[24px] lg:text-[28px]">Welcome</h1>
             <p class="text-[15px] md:text-[18px] lg:text-[22px]">Silakan melakukan register/login</p>
