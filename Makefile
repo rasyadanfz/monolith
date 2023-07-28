@@ -1,8 +1,8 @@
 init:
 	@make network -i
 	@make build
-	@make setup
 	@make up
+	@make setup
 	@make seed
 
 network:
