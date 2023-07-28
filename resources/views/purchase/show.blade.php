@@ -20,10 +20,14 @@
             <input type="number" name="purchaseNum" id="purchaseNum" min="1" max="{{$item['stok']}}" class=" pl-2 border border-black" value="1" data-harga={{ $item['harga'] }}>
             <input type="hidden" name="item_id" value="{{ $item['id'] }}">
             <div id="harga" class="font-bold mb-3">Total Harga: {{ $item['harga'] }}</div>
-            <button type="submit" class="flex gap-3 p-2 bg-black rounded-lg">
-                <div class="font-bold text-white">Beli</div>
-                <i class="bi bi-chevron-compact-right text-white"></i>
-            </button>
+            @auth
+                <button type="submit" class="flex gap-3 p-2 bg-black rounded-lg">
+                    <div class="font-bold text-white">Beli</div>
+                    <i class="bi bi-chevron-compact-right text-white"></i>
+                </button>
+            @else
+                <a href="/login" class="text-[13px] md:text-[17px] lg:text-[19px]">Login untuk membeli barang</a>
+            @endauth
         </form>
     </div>
 </x-layout>

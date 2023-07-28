@@ -1,5 +1,17 @@
 # Monolith
 
+## Daftar Isi
+
+-   [Nama & Nim](#nama--nim)
+-   [Cara Menjalankan](#cara-menjalankan)
+-   [Design Pattern](#design-pattern)
+-   [Tech Stack](#tech-stack)
+-   [Endpoint](#endpoint)
+-   [Bonus](#bonus)
+    -   [Responsive Layout](#responsive-layout)
+    -   [Fitur Tambahan](#fitur-tambahan)
+    -   [Lighthouse](#lighthouse)
+
 ## Nama & NIM
 
 Dibuat oleh Rasyadan Faza Safiqur Rahman (18221103)
