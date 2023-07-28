@@ -18,9 +18,12 @@
             <div class="text-[15px] md:text-[18px] lg:text-[20px]">{{ $companyName }}</div>
         </div>
     </div>
-
-    <a href="{{ route('purchaseItem', ['id' => $item['id']]) }}" class="bg-black inline-flex gap-x-2 p-2 ml-2 rounded-lg">
-        <div class="text-white">Beli Barang</div>
-        <i class="bi bi-chevron-compact-right text-white"></i>
-    </a>
+    @auth
+        <a href="/login" class="text-[13px] md:text-[17px] lg:text-[19px]">Login untuk membeli barang</a>
+    @else
+        <a href="{{ route('purchaseItem', ['id' => $item['id']]) }}" class="bg-black inline-flex gap-x-2 p-2 ml-2 rounded-lg">
+            <div class="text-white">Beli Barang</div>
+            <i class="bi bi-chevron-compact-right text-white"></i>
+        </a>
+    @endauth
 </x-layout>
