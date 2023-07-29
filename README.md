@@ -18,8 +18,7 @@ Dibuat oleh Rasyadan Faza Safiqur Rahman (18221103)
 
 ## Cara Menjalankan
 
-Note : Jalankan di WSL directory (~) agar proses menjalankan lebih cepat. Menjalankan command berikut
-di Windows akan memakan waktu lebih lama akibat transfer file antara OS Windows dengan OS Linux pada WSL
+Note : Proses menjalankan akan memakan waktu cukup lama di windows akibat interaksi I/O antara Windows dan WSL
 
 1. Pastikan Docker dan Docker Compose sudah terinstall
 
