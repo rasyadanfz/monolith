@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Tymon\JWTAuth\Facades\JWTAuth;
+use Illuminate\Support\Facades\Cookie;
 
 class AuthController extends Controller
 {
 
     public function __construct()
     {
-        $this->middleware('auth:web', ['except' => ['login']]);
+        $this->middleware('auth:web_jwt', ['except' => ['login']]);
     }
     
     public function login(Request $request){
@@ -26,7 +28,8 @@ class AuthController extends Controller
             return back()->withErrors(['Error' => "Invalid Credentials"]);
         }
 
-        return redirect('/')->withCookie(cookie('access_token', $this->respondWithToken($token)));
+        $cookie = Cookie::make('access_token', $token, 3600, null, null, false, true);
+        return redirect('/')->withCookie($cookie);
     }
 
     public function me(){

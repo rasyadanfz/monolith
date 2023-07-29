@@ -26,11 +26,11 @@ Route::get('/catalogs', [ItemsController::class, 'index'])->name('catalogs');
 
 Route::get('/item/{id}', [ItemsController::class, 'show'])->name('detailBarang');
 
-Route::get('/purchase/{id}', [PurchaseController::class, 'show'])->name('purchaseItem')->middleware('auth');
+Route::get('/purchase/{id}', [PurchaseController::class, 'show'])->name('purchaseItem')->middleware('auth:web_jwt');
 
-Route::post('/purchase', [PurchaseController::class, 'handlePurchase'])->middleware('auth');
+Route::post('/purchase', [PurchaseController::class, 'handlePurchase'])->middleware('auth:web_jwt');
 
-Route::get('/history', [PurchaseHistoryController::class, 'show'])->name('purchaseHistory')->middleware('auth');
+Route::get('/history', [PurchaseHistoryController::class, 'show'])->name('purchaseHistory')->middleware('auth:web_jwt');
 
 // Register & Login
 

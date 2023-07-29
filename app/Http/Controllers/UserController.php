@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
-use JWTAuth;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class UserController extends Controller
 {
@@ -32,7 +32,7 @@ class UserController extends Controller
         $user = User::create($formFields);
 
         // Login
-        $token = auth()->login($user);
+        $token = JWTAuth::fromUser($user);
 
         return redirect('/')->with('message', "User created and logged in")->withCookie(cookie('access_token', $token, auth('api')->factory()->getTTL() * 60));
     }
