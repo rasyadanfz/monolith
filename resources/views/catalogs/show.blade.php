@@ -24,6 +24,6 @@
             <i class="bi bi-chevron-compact-right text-white"></i>
         </a>
     @else
-        <a href="/login" class="text-[13px] md:text-[17px] lg:text-[19px]">Login untuk membeli barang</a>
+        <div class="text-[13px] md:text-[17px] lg:text-[19px]"><a href="/login" class="no-underline font-bold">Login</a> untuk membeli barang</div>
     @endauth
 </x-layout>
