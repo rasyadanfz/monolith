@@ -62,6 +62,12 @@ Jika terdapat error ketika menjalankan command pertama, ignore saja error terseb
 
 6. Monolith dapat diakses pada URL http://localhost:8000
 
+**[Akun yang sudah ada]** :
+
+Username : **randomperson**
+
+Password : **randompersonpassword**
+
 ## Design Pattern
 
 1. **Factory**
