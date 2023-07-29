@@ -15,7 +15,7 @@
                 <button type="submit" class="p-2 px-4 bg-black text-white border border-black rounded-lg">Login</button>
             </div>
             <div class="text-black flex flex-col md:flex-row gap-x-1 justify-center items-center mt-2">
-                Belum punya akun? <a href="/login" class="underline font-bold">Register</a>
+                Belum punya akun? <a href="/register" class="underline font-bold">Register</a>
             </div>
         </form>
     </div>
