@@ -12,7 +12,7 @@
 <body>
     <nav class="flex justify-between items-center px-4 py-3 bg-black text-white">
         <a href="/" class="font-bold text-[25px]">Monolith</a>
-        @auth
+        @if(auth()->user())
             <div class="gap-5 justify-between text-[17px] items-center hidden md:flex">
                 <a href="{{ route('purchaseHistory') }}">Riwayat Pembelian</a>
                 <form method="POST" action="/logout">
@@ -35,9 +35,9 @@
                     <i class="bi bi-list dropdown"></i>
                 </div>
             </div>
-        @endauth
+        @endif
     </nav>
-    @auth
+    @if(auth()->user())
     <div class="md:hidden">
         <div class="hidden dropdown-menu flex flex-col gap-2 justify-center px-4 pb-4 bg-black text-white">
             <a href="{{ route('purchaseHistory') }}">Riwayat Pembelian</a>
@@ -54,7 +54,7 @@
             <a href="/login" class="no-underline text-white">Login</a>
         </div>
     </div>
-    @endauth
+    @endif
     <main class="mx-3 my-2">
         {{ $slot }}
     </main>
