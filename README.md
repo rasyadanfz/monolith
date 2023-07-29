@@ -86,7 +86,7 @@ Password : **randompersonpassword**
 Dalam pengembangan Monolith, berikut adalah Technology Stack yang digunakan
 
 -   Laravel Framework v10.15.0
-  - tymon/jwt-auth v2 (Driver JWT yang menghandle JWT Auth)
+    - tymon/jwt-auth v2 (Driver JWT yang menghandle JWT Auth)
 -   Nginx v1.25.1
 -   MySQL v5.7
 -   Tailwind CSS v3.3
