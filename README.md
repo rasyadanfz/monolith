@@ -18,6 +18,9 @@ Dibuat oleh Rasyadan Faza Safiqur Rahman (18221103)
 
 ## Cara Menjalankan
 
+Note : Jalankan di WSL directory (~) agar proses menjalankan lebih cepat. Menjalankan command berikut
+di Windows akan memakan waktu lebih lama akibat transfer file antara OS Windows dengan OS Linux pada WSL
+
 1. Pastikan Docker dan Docker Compose sudah terinstall
 
 ```sh
@@ -57,7 +60,7 @@ docker exec monolith-monolith_app-1 bash -c "php artisan migrate:fresh --seed"
 
 Jika terdapat error ketika menjalankan command pertama, ignore saja error tersebut
 
-5. Monolith dapat diakses pada URL http://localhost:8000
+6. Monolith dapat diakses pada URL http://localhost:8000
 
 ## Design Pattern
 
